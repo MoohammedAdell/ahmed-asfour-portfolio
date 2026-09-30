@@ -1,9 +1,16 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, Eye, X, CheckCircle, Smartphone } from 'lucide-react';
-import Image from 'next/image';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  ExternalLink,
+  Github,
+  Eye,
+  X,
+  CheckCircle,
+  Smartphone,
+} from "lucide-react";
+import Image from "next/image";
 
 export interface Project {
   id: string;
@@ -20,85 +27,107 @@ export interface Project {
   demo: string;
 }
 
-
 const PROJECTS_DATA: Project[] = [
   {
-    id: 'neuronest',
-    title: 'NeuroNest - Autism Support App',
-    category: 'Flutter',
-    image: '/img1.jpeg',
+    id: "neuronest",
+    title: "NeuroNest - Autism Support App",
+    category: "Flutter",
+    image: "/img1.jpeg",
     description:
-      'A specialized Flutter application designed to assist children with autism spectrum disorder (ASD) and support their caregivers through interactive sensory activities, progress tracking, and structured visual schedules.',
+      "A specialized Flutter application designed to assist children with autism spectrum disorder (ASD) and support their caregivers through interactive sensory activities, progress tracking, and structured visual schedules.",
     longDescription:
-      'NeuroNest provides an inclusive digital environment tailored for neurodiverse individuals. It incorporates visual communication boards, customizable sensory relaxation modes, behavioral tracking, and direct reporting for care specialists.',
+      "NeuroNest provides an inclusive digital environment tailored for neurodiverse individuals. It incorporates visual communication boards, customizable sensory relaxation modes, behavioral tracking, and direct reporting for care specialists.",
     problem:
-      'Caregivers and therapists lack unified mobile tools to monitor behavioral patterns, facilitate daily scheduling, and reduce visual/sensory overstimulation for children with autism.',
+      "Caregivers and therapists lack unified mobile tools to monitor behavioral patterns, facilitate daily scheduling, and reduce visual/sensory overstimulation for children with autism.",
     solution:
-      'Developed an accessible mobile experience with calm visual themes, intuitive PECS-inspired visual cards, real-time activity tracking, and secure offline synchronization using Flutter.',
+      "Developed an accessible mobile experience with calm visual themes, intuitive PECS-inspired visual cards, real-time activity tracking, and secure offline synchronization using Flutter.",
     features: [
-      'Interactive Visual Schedules & Digital Routine Cards',
-      'Sensory-Friendly Calming Exercises & Games',
-      'Caregiver Dashboard & Dynamic Progress Analytics',
-      'Custom Reminders & Visual Behavioral Triggers'
+      "Interactive Visual Schedules & Digital Routine Cards",
+      "Sensory-Friendly Calming Exercises & Games",
+      "Caregiver Dashboard & Dynamic Progress Analytics",
+      "Custom Reminders & Visual Behavioral Triggers",
     ],
-    technologies: ['Flutter', 'Dart', 'Firebase', 'State Management', 'REST API'],
-    github: 'https://github.com/a7med3sfour099/NeuroNest',
-    demo: 'https://github.com/a7med3sfour099/NeuroNest'
+    technologies: [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "State Management",
+      "REST API",
+    ],
+    github: "https://github.com/a7med3sfour099/NeuroNest",
+    demo: "https://github.com/a7med3sfour099/NeuroNest",
   },
   {
-    id: 'meal-planner',
-    title: 'Meal Planning & Food Delivery',
-    category: 'Flutter',
-    image: '/img2.jpeg',
+    id: "meal-planner",
+    title: "Meal Planning & Food Delivery",
+    category: "Flutter",
+    image: "/img2.jpeg",
     description:
-      'A cross-platform mobile application for personalized meal planning, dietary tracking, and seamless food ordering with intelligent nutrition analysis.',
+      "A cross-platform mobile application for personalized meal planning, dietary tracking, and seamless food ordering with intelligent nutrition analysis.",
     longDescription:
-      'An end-to-end culinary and nutrition solution enabling users to plan daily meals, auto-generate organized shopping lists, track calorie intake, and order healthy dishes directly from partner kitchens.',
+      "An end-to-end culinary and nutrition solution enabling users to plan daily meals, auto-generate organized shopping lists, track calorie intake, and order healthy dishes directly from partner kitchens.",
     problem:
-      'Busy individuals struggle to maintain healthy eating habits and coordinate grocery shopping or meal ordering based on personalized calorie targets.',
+      "Busy individuals struggle to maintain healthy eating habits and coordinate grocery shopping or meal ordering based on personalized calorie targets.",
     solution:
-      'Built a Flutter solution featuring automated meal generation, dynamic macro-nutrient breakdown graphs, and a streamlined checkout flow for meal delivery.',
+      "Built a Flutter solution featuring automated meal generation, dynamic macro-nutrient breakdown graphs, and a streamlined checkout flow for meal delivery.",
     features: [
-      'Customizable Weekly Meal Plans & Calorie Trackers',
-      'Automated Shopping List Generator',
-      'Real-Time Food Order Tracking & Menu Customization',
-      'Smart Recipe Recommendations based on Macros'
+      "Customizable Weekly Meal Plans & Calorie Trackers",
+      "Automated Shopping List Generator",
+      "Real-Time Food Order Tracking & Menu Customization",
+      "Smart Recipe Recommendations based on Macros",
     ],
-    technologies: ['Flutter', 'Dart', 'BLoC Pattern', 'REST API', 'JSON Parsing'],
-    github: 'https://github.com/a7med3sfour099/Meal-planning-app',
-    demo: 'https://github.com/a7med3sfour099/Meal-planning-app'
+    technologies: [
+      "Flutter",
+      "Dart",
+      "BLoC Pattern",
+      "REST API",
+      "JSON Parsing",
+    ],
+    github: "https://github.com/a7med3sfour099/Meal-planning-app",
+    demo: "https://github.com/a7med3sfour099/Meal-planning-app",
   },
   {
-    id: 'ecommerce-tech-store',
-    title: 'PulseStore - Tech E-Commerce App',
-    category: 'UI/UX',
+    id: "todo-list",
+    title: "To-Do List App",
+    category: "Productivity",
+    image: "/img3.jpeg",
+
     description:
-      'A modern e-commerce mobile experience featuring custom UI micro-animations, fast product discovery, secure checkout, and interactive order tracking.',
+      "A clean and intuitive To-Do List mobile application designed to help users organize tasks, track progress, and manage their daily activities efficiently.",
+
     longDescription:
-      'PulseStore demonstrates high-performance mobile UI patterns, smooth card interactions, advanced category filters, cart management, and seamless multi-step order processing.',
+      "The To-Do List app provides a simple and responsive task management experience with smooth interactions, organized task states, and an easy-to-use interface for creating, updating, completing, and deleting tasks.",
+
     problem:
-      'Traditional shopping apps suffer from bloated interface hierarchy, slow navigation transitions, and complex multi-step checkout drop-offs.',
+      "Managing daily tasks can become difficult when tasks are scattered across notes and different apps, making it harder to track priorities and completed work.",
+
     solution:
-      'Engineered a fluid, high-conversion mobile storefront with optimistic UI updates, integrated payment gateways, and crisp product visualization.',
+      "Built a focused task management application that allows users to quickly create, update, complete, and remove tasks through a simple and organized interface.",
+
     features: [
-      'Interactive Product Showcase with Fluid Animations',
-      'Smart Search & Dynamic Multi-Attribute Filters',
-      'Persistent Shopping Cart & Wishlist Synchronization',
-      'Multi-Payment Gateway Integration Flow'
+      "Create, Edit, and Delete Tasks",
+      "Mark Tasks as Completed",
+      "Organized Task Management",
+      "Clean and Responsive User Interface",
     ],
-    technologies: ['Flutter', 'Dart', 'Provider', 'Stripe API', 'Tailwind Colors'],
-    github: 'https://github.com/a7med3sfour099',
-    demo: 'https://github.com/a7med3sfour099'
-  }
+
+    technologies: ["Flutter", "Dart", "Provider", "Material Design"],
+
+    github: "https://github.com/a7med3sfour099/To-Do-List-Project.git",
+
+    demo: "https://github.com/a7med3sfour099/To-Do-List-Project.git",
+  },
 ];
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="py-24 bg-[#050816] relative border-t border-slate-800/40">
+    <section
+      id="projects"
+      className="py-24 bg-[#050816] relative border-t border-slate-800/40"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-[#42A5F5] font-mono text-sm uppercase tracking-widest font-semibold mb-2">
@@ -156,7 +185,7 @@ export default function Projects() {
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#42A5F5] transition-colors">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-slate-300 text-sm leading-relaxed mb-6 line-clamp-3">
                   {project.description}
                 </p>
@@ -204,7 +233,6 @@ export default function Projects() {
             </motion.div>
           ))}
         </div>
-
       </div>
 
       {/* Interactive Project Modal */}
@@ -266,13 +294,17 @@ export default function Projects() {
                     <h5 className="text-xs font-mono text-red-400 uppercase font-semibold mb-1">
                       The Challenge
                     </h5>
-                    <p className="text-xs text-slate-300 leading-relaxed">{selectedProject.problem}</p>
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {selectedProject.problem}
+                    </p>
                   </div>
                   <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
                     <h5 className="text-xs font-mono text-emerald-400 uppercase font-semibold mb-1">
                       The Solution
                     </h5>
-                    <p className="text-xs text-slate-300 leading-relaxed">{selectedProject.solution}</p>
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {selectedProject.solution}
+                    </p>
                   </div>
                 </div>
 
@@ -283,8 +315,14 @@ export default function Projects() {
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {selectedProject.features.map((feat, fIdx) => (
-                      <div key={fIdx} className="flex items-center gap-2 text-xs text-slate-300">
-                        <CheckCircle size={14} className="text-[#00D4FF] shrink-0" />
+                      <div
+                        key={fIdx}
+                        className="flex items-center gap-2 text-xs text-slate-300"
+                      >
+                        <CheckCircle
+                          size={14}
+                          className="text-[#00D4FF] shrink-0"
+                        />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -298,7 +336,10 @@ export default function Projects() {
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies.map((t) => (
-                      <span key={t} className="px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 border border-slate-800 text-slate-200">
+                      <span
+                        key={t}
+                        className="px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 border border-slate-800 text-slate-200"
+                      >
                         {t}
                       </span>
                     ))}
