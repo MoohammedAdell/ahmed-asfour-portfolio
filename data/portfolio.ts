@@ -48,8 +48,8 @@ export const PORTFOLIO_DATA = {
       "My focus is not only writing code, but also creating products that feel smooth and intuitive for users.",
     ],
     stats: [
-      { label: "Years Experience", value: 3, suffix: "+" },
-      { label: "Projects Completed", value: 20, suffix: "+" },
+      { label: "Years Experience", value: 1, suffix: "+" },
+      { label: "Projects Completed", value: 10, suffix: "+" },
       { label: "Technologies Mastered", value: 15, suffix: "+" },
       { label: "Happy Clients", value: 10, suffix: "+" },
     ],
