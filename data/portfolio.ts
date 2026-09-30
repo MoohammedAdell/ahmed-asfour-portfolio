@@ -108,15 +108,15 @@ export const PORTFOLIO_DATA = {
   experiences: [
     {
       company: "Digital Egypt Pioneers Initiative (DEPI)",
-      role: "React / Full Stack Web Developer Trainee",
+      role: "Flutter Developer Trainee",
       period: "2024 - Present",
       location: "Egypt (Remote / Hybrid)",
       description:
-        "Participating in an intensive scholarship program provided by the Ministry of Communications and Information Technology (MCIT) focusing on modern web development practices.",
+        "Participating in an intensive scholarship program provided by the Ministry of Communications and Information Technology (MCIT) focusing on cross-platform mobile app development.",
       highlights: [
-        "Building responsive web applications using React, Next.js, and TypeScript.",
+        "Building responsive and high-performance mobile applications using Flutter and Dart.",
         "Collaborating on real-world practical projects following Agile software development methodologies.",
-        "Strengthening technical skills in state management, API integration, and modern UI frameworks.",
+        "Strengthening technical skills in state management (Bloc/Provider), REST API integration, and clean architecture.",
       ],
     },
   ] as Experience[],

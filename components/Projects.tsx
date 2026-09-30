@@ -32,7 +32,7 @@ const PROJECTS_DATA: Project[] = [
     id: "neuronest",
     title: "NeuroNest - Autism Support App",
     category: "Flutter",
-    image: "/img1.jpeg",
+    image: "/img.jpg",
     description:
       "A specialized Flutter application designed to assist children with autism spectrum disorder (ASD) and support their caregivers through interactive sensory activities, progress tracking, and structured visual schedules.",
     longDescription:
@@ -61,7 +61,7 @@ const PROJECTS_DATA: Project[] = [
     id: "meal-planner",
     title: "Meal Planning & Food Delivery",
     category: "Flutter",
-    image: "/img2.jpeg",
+    image: "/img2.jpg",
     description:
       "A cross-platform mobile application for personalized meal planning, dietary tracking, and seamless food ordering with intelligent nutrition analysis.",
     longDescription:
@@ -90,7 +90,7 @@ const PROJECTS_DATA: Project[] = [
     id: "todo-list",
     title: "To-Do List App",
     category: "Productivity",
-    image: "/img3.jpeg",
+    image: "/img3.jpg",
 
     description:
       "A clean and intuitive To-Do List mobile application designed to help users organize tasks, track progress, and manage their daily activities efficiently.",
@@ -158,7 +158,7 @@ export default function Projects() {
                       src={project.image}
                       alt={project.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 800px) 50vw, 33vw"
                       className="object-cover object-center transform transition-transform duration-500 group-hover:scale-105"
                     />
                   ) : (
